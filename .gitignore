@@ -42,6 +42,10 @@ Code/PyTick/Scripts/Draft.py
 
 Code/Scripts/__pycache__/
 
-# ÒôÆµÎÄ¼þ
 *.wav 
 *.mp3
+
+
+# Jay src
+Jay/Src/Album
+Jay/Src/List
