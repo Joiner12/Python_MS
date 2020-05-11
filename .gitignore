@@ -1,0 +1,47 @@
+python_m.code-workspace
+.idea/
+venv/
+Code/PyTick/Scripts/__pycache__/
+Code/PyTick/Scripts/Ui_PyTick.py
+Code/PyTick/Scripts/PyTick.ui
+
+Html/
+index.html
+*.spec
+Code/PyTick/Scripts/build/
+Code/PyTick/Scripts/dist/
+
+Code/build/
+
+.vscode/
+
+# 
+Src/
+
+Code/images
+Code/google-translate/__pycache__
+
+Code/COMTool-master
+Code/Scripts/Draft.py
+
+# *.exe
+
+!Code/PyTick/Src
+Code/PyTick/Exe/*.exe
+
+Code/PyTick/Scripts/__pycache__
+
+*.mp3
+Code/FeelUOwn/
+Code/PyTick/Logs
+
+# reading file
+Code/PyTick/Scripts/Reading.py
+
+Code/PyTick/Scripts/Draft.py
+
+Code/Scripts/__pycache__/
+
+# ÒôÆµÎÄ¼þ
+*.wav 
+*.mp3
