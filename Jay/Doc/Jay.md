@@ -47,6 +47,13 @@ import datetime.datetime
 2.2 路径转换（abusolute to relative）
 
 2.3 脚本文件查看
+
+2.4 多重for使用技巧
+```python
+for i,j,k in XXX:
+  print(i,j,k)
+```
+
 ---
 ---
 
@@ -83,9 +90,9 @@ bsObj.findAll(text="the price")
 # 关系。
 bsObj.findAll(id="text")
 
----
-
 ```
+
+---
 
 ### 2.2 BeautifulSoup对象
 
