@@ -2,6 +2,7 @@
 """
     Jay:
     albums & songs
+    从本地html文件提取信息
 """
 
 from datetime import datetime
