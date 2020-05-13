@@ -49,10 +49,16 @@ import datetime.datetime
 2.3 脚本文件查看
 
 2.4 多重for使用技巧
+
 ```python
 for i,j,k in XXX:
   print(i,j,k)
 ```
+2.5 from .vs. import
+
+2.6 判断文件(夹)是否存在
+
+
 
 ---
 ---
