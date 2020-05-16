@@ -60,8 +60,9 @@ for i,j,k in XXX:
 
 2.7 网页拼接
 
+2.8 表单
 
-
+2.9 requests库 
 ---
 ---
 
@@ -165,3 +166,5 @@ print os.path.abspath(path)
 [2] 使用dict 和set  https://www.liaoxuefeng.com/wiki/1016959663602400/1017104324028448
 
 [3] 绝对|相对路径转换 https://www.cnblogs.com/hont/p/5412432.html
+
+[4] requests 库链接 https://requests.readthedocs.io/zh_CN/latest/

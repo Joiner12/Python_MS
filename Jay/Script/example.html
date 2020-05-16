@@ -1,10 +1,278 @@
-<ul class="rc-pagination" unselectable="unselectable">
-    <li title="上一页" class="rc-pagination-disabled rc-pagination-prev" aria-disabled="true"><a
-            class="rc-pagination-item-link" disabled=""></a></li>
-    <li title="1" class="rc-pagination-item rc-pagination-item-1 rc-pagination-item-active" tabindex="0"><a
-            href="/list?page=1&amp;query=%7B%22artistId%22%3A%221260%22%7D&amp;scene=artist&amp;type=album">1</a></li>
-    <li title="2" class="rc-pagination-item rc-pagination-item-2" tabindex="0"><a
-            href="/list?page=2&amp;query=%7B%22artistId%22%3A%221260%22%7D&amp;scene=artist&amp;type=album">2</a></li>
-    <li title="下一页" tabindex="0" class=" rc-pagination-next" aria-disabled="false"><a
-            class="rc-pagination-item-link"></a></li>
-</ul>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="webkit" name="renderer" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>登录 - 虾米网(xiami.com) - 乐随心动</title>
+    <meta content="虾米网(xiami.com) - 乐随心动" name="keywords" />
+    <meta content="虾米网(xiami.com) - 乐随心动" name="description" />
+    <link href="//g.alicdn.com" rel="dns-prefetch" />
+    <link href="//gw.alicdn.com" rel="dns-prefetch" />
+    <link href="//img.alicdn.com" rel="dns-prefetch" />
+    <link href="//oxiami.alicdn.com" rel="dns-prefetch" />
+    <link href="//at.alicdn.com" rel="dns-prefetch" />
+    <meta content="a2oaf" name="data-spm" />
+    <meta content="gNntuhTm2rH7Qa/GPp6lf0mIp9KQsjejNs+i1LZhG7U=" name="verify-v1" />
+    <link href="//img.alicdn.com/tfs/TB1qP4zgY5YBuNjSspoXXbeNFXa-550-550.png" rel="icon" type="image/png" />
+    <link href="//g.alicdn.com/xiami-frontend/web-xiami-login-node/0.0.29/desktop/layout/index.css" rel="stylesheet" />
+    <script crossorigin="" src="//g.alicdn.com/alilog/mlog/aplus_v2.js"></script>
+    <script crossorigin="" src="//g.alicdn.com/de/music-static/login/static/lib/jQuery/1.9.1/jquery.min.js"></script>
+    <script crossorigin="" src="//g.alicdn.com/sd/sufei/0.3.7/app/common/sufei-jquery.js"></script>
+    <script crossorigin="" src="//g.alicdn.com/sd/ncpc/nc.js?t=2020051615"></script>
+    <script crossorigin="" src="//g.alicdn.com/AWSC/AWSC/awsc.js"></script>
+    <script>
+        AWSC.use('uab', function (state, uab) {
+            if (state === 'loaded') {
+                window.uab = uab;
+            }
+        });
+        AWSC.use('um', function (state, um) {
+            if (state === 'loaded') {
+                um.init({
+                    appName: 'web-xiami-login-node',
+                }, (state, result) => {
+                    if (state === 'success') {
+                        document.cookie = `_xm_umtoken=${result.tn}; secure;`;
+                    }
+                });
+            }
+        });
+    </script>
+    <script crossorigin="" src="https://g.alicdn.com/dt/tracker/3.4.11/??tracker.Tracker.js"></script>
+    <script>
+        var tracker = new window.Tracker({
+            pid: 'xiami-login',
+        });
+        tracker.install();
+    </script>
+</head>
+
+<body data-spm="11261996">
+    <div data-spm="226669510" id="header">
+        <div class="primary">
+            <div class="gap">
+                <div class="wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="logo"><a href="//www.xiami.com/"
+                                        title="虾米音乐网(xiami.com) - 高品质音乐 发现 分享">虾米音乐网(xiami.com) - 高品质音乐 发现 分享</a></td>
+                                <td class="nav">
+                                    <a href="//www.xiami.com/">发现音乐</a>
+                                    <a href="//www.xiami.com/space/lib-song">我的音乐</a>
+                                </td>
+                                <td class="subnav">
+                                    <a class="first" href="//www.xiami.com/collect">歌单</a>
+                                    <a class="middle" href="//www.xiami.com/radio" target="_blank">电台</a>
+                                    <a class="middle" href="//i.xiami.com">音乐人</a>
+                                    <a class="last" href="//www.xiami.com/apps/mobile" target="_blank">客户端</a>
+                                </td>
+                                <td class="search">
+                                </td>
+                                <td class="reg">
+                                    <a href="//www.xiami.com/member/register">免费注册</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <link href="//g.alicdn.com/xiami-frontend/web-xiami-login-node/0.0.29/desktop/login/index.css"
+            rel="stylesheet" />
+        <link href="//g.alicdn.com/music/x-login/0.1.2/qrcode/index.css" rel="stylesheet" />
+        <div class="wrapper">
+            <div id="main">
+                <div id="login">
+                    <div class="login-xm" style="display:none;">
+                        <h2 class="tit">虾米账号密码登录</h2>
+                        <div class="content">
+                            <div id="xiami-login">
+                                <div id="error"></div>
+                                <input name="redirectURL" type="hidden"
+                                    value="https%3A%2F%2Fwww.xiami.com%2Fartist%2Fiim17edb" />
+                                <p>
+                                    <!--[if lt IE 10 ]><label for="account">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入邮箱/手机号</label><![endif]-->
+                                    <input autocapitalize="off" autocomplete="off" autocorrect="off" class="input"
+                                        id="account" name="account" placeholder="请输入邮箱/手机号" spellcheck="false"
+                                        tabindex="1" value="" />
+                                    <span id="popup"></span>
+                                </p>
+                                <p>
+                                    <!--[if lt IE 10 ]><label for="pw">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入密码</label><![endif]-->
+                                    <input autocomplete="off" class="input" id="password" name="password"
+                                        placeholder="请输入密码" tabindex="2" type="password" />
+                                </p>
+                                <script>
+                                    window.needValidate = 1;
+                                </script>
+                                <div class="captcha-wrapper" style="display:block;">
+                                    <div class="nc-container" id="captcha"></div>
+                                </div>
+                                <p>
+                                    <input id="submit" name="submit" tabindex="4" type="submit" value="登 录" />
+                                </p>
+                                <p class="action">
+                                    <a class="major" href="//www.xiami.com/member/register" target="_blank">新用户注册</a>
+                                    <a class="minor" href="//www.xiami.com/member/getpassword" target="_blank">忘记密码?</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="extra">
+                            <a class="taobao"
+                                href="https://oauth.taobao.com/authorize?response_type=code&amp;client_id=23355923&amp;redirect_uri=https%3A%2F%2Fpassport.xiami.com%2Fthird-login%3Fplatform%3Dtaobao%26action%3Dlogin&amp;view=web&amp;state=0b833acf15896143189223965e6cb5"
+                                title="淘宝登录"><b class="icon"></b></a>
+                            <!-- <a class="alipay" href="https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2017073107973310&scope=SCOPE&redirect_uri=https%3A%2F%2Fpassport.xiami.com%2Fthird-login%3Fplatform%3Dalipay%26action%3Dlogin&state={thirdLogin.alipay.state}" title="支付宝登录"><b class="icon"></b></a> -->
+                            <a class="weibo"
+                                href="https://api.weibo.com/oauth2/authorize?client_id=3845915579&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fpassport.xiami.com%2Fthird-login%3Fplatform%3Dweibo%26action%3Dlogin&amp;state=0b833acf15896143189223965e6cb5"
+                                title="微博登录"><b class="icon"></b></a>
+                            <a class="wechat"
+                                href="https://open.weixin.qq.com/connect/qrconnect?response_type=code&amp;appid=wx535f2b3fcbbf6720&amp;redirect_uri=https%3A%2F%2Fpassport.xiami.com%2Fthird-login%3Fplatform%3Dwechat%26action%3Dlogin&amp;scope=snsapi_login&amp;state=0b833acf15896143189223965e6cb5"
+                                title="微信登录"><b class="icon"></b></a>
+                            <a class="qq"
+                                href="https://graph.qq.com/oauth2.0/authorize?response_type=code&amp;client_id=205297&amp;redirect_uri=https%3A%2F%2Fpassport.xiami.com%2Fthird-login%3Fplatform%3Dqq%26action%3Dlogin&amp;state=0b833acf15896143189223965e6cb5"
+                                title="QQ登录"><b class="icon"></b></a>
+                        </div>
+                    </div>
+                    <div class="login-qrcode">
+                        <h2 class="tit">虾米APP扫一扫，登录安全又快速</h2>
+                        <div class="qrcode-container">
+                            <div class="qrcode-ing J_QRCodeIng">
+                                <div class="qrcode-main">
+                                    <div class="qrcode-img J_QRCodeImg">
+                                        <img class="loadvl"
+                                            src="https://oxiami.alicdn.com/res/img/default/loading2.gif" />
+                                    </div>
+                                    <div class="qrcode-err J_QRCodeErr">
+                                        <h5>二维码已失效</h5>
+                                        <a class="refresh J_QRCodeRefresh" href="javascript:;">刷新获取</a>
+                                    </div>
+                                </div>
+                                <div class="qrcode-description">
+                                    <p>7.0版本以上：<a class="alink" href="//www.xiami.com/apps/mobile">虾米APP</a> - 个人中心 -
+                                        右上角<i class="iconfont"></i></p>
+                                    <small>6.0版本以上：<a class="alink" href="//www.xiami.com/apps/mobile">虾米APP</a> - 账号 -
+                                        左上角</small>
+                                </div>
+                                <div class="qrcode-notice">手机号注册账户，需在虾米5.7.6及以上版本使用</div>
+                            </div>
+                            <div class="qrcode-msg J_QRCodeMsg">
+                                <div class="qrcode-msg-ok">
+                                    <div class="msg-icon">
+                                        <i class="iconfont icon-phone"></i>
+                                    </div>
+                                    <h6>扫描成功！</h6>
+                                    <p>请在手机上确认登录</p>
+                                    <div class="alink"><a class="alink J_QRCodeRefresh" href="#">返回二维码扫描</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a action-type="tbxm" class="login-switch" href="javascript:void(0);" id="J_LoginSwitch">
+                        <i class="iconfont"></i>
+                    </a>
+                </div>
+                <div class="qrcode-tips J_QRCodeTips"><span class="tit">用户名密码登录</span><i class="iconfont arrow"></i>
+                </div>
+            </div>
+            <div id="sidebar">
+                <script crossorigin="" src="//g.alicdn.com/de/music-static/login/ad.js"></script>
+            </div>
+        </div>
+        <script crossorigin=""
+            src="//g.alicdn.com/xiami-frontend/web-xiami-login-node/0.0.29/desktop/login/index.js"></script>
+        <script crossorigin="" src="//g.alicdn.com/music/x-login/0.1.2/qrcode/index.js"></script>
+    </div>
+    <div data-spm="1110930425" id="footer">
+        <div class="gap">
+            <div class="wrapper">
+                <div class="content">
+                    <div class="sitemap">
+                        <dl>
+                            <dt>关于</dt>
+                            <dd><a href="//www.xiami.com/about" title="关于我们">关于我们</a></dd>
+                            <dd><a href="https://job.alibaba.com/zhaopin/positionList.htm?keyWord=JXU5NjNGJXU5MUNDJXU5N0YzJXU0RTUw&amp;_input_charset=UTF-8"
+                                    target="_blank" title="虾米招聘">虾米招聘</a><sup class="hot"></sup></dd>
+                            <dd><a href="//i.xiami.com/musician/pr" target="_blank" title="独立音乐人合作">独立音乐人合作</a></dd>
+                            <dd><a href="//www.xiami.com/contact" title="联系我们">联系我们</a></dd>
+                            <dd><a href="//www.xiami.com/links" title="友情链接">友情链接</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>特色服务</dt>
+                            <dd><a href="//www.xiami.com/vip" title="虾米 VIP">虾米 VIP</a></dd>
+                            <dd><a href="//www.xiami.com/widget" title="虾米播播">虾米播播</a></dd>
+                            <dd><a href="//www.xiami.com/events" title="音乐专题">音乐专题</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>虾米客户端</dt>
+                            <dd><a href="//www.xiami.com/apps/iphone" title="虾米 for iPhone">虾米 for iPhone</a><sup
+                                    class="hot"></sup></dd>
+                            <dd><a href="//www.xiami.com/apps/android" title="虾米 for Android">虾米 for Android</a></dd>
+                            <dd><a href="//www.xiami.com/apps/win" title="虾米 for Windows">虾米 for Windows</a></dd>
+                            <dd><a href="//www.xiami.com/apps/mac" title="虾米 for Mac">虾米 for Mac</a></dd>
+                            <dd><a href="//www.xiami.com/apps/ipad" title="虾米 for iPad">虾米 for iPad</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>更多</dt>
+                            <dd><a href="//www.xiami.com/music/category" title="分类找歌">分类找歌</a></dd>
+                            <dd><a href="//www.xiami.com/alicare" title="帮助中心">帮助中心</a></dd>
+                            <dd><a href="//www.xiami.com/wiki/addalbum" title="添加虾米还没有的资料">添加虾米还没有的资料</a></dd>
+                            <dd><a href="//www.xiami.com/music/want" title="提交大家想要的专辑">提交大家想要的专辑</a></dd>
+                            <dd><a href="//www.xiami.com/space/upload-audio" title="音频上传">音频上传</a></dd>
+                            <dd><a href="//www.xiami.com/music/words" title="添加歌词">添加歌词</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ali_group">
+                    <a href="http://page.1688.com/shtml/about/ali_group1.shtml" target="_blank">阿里巴巴集团</a>
+                    <a href="http://www.alibaba.com" target="_blank">阿里巴巴国际站</a>
+                    <a href="http://www.1688.com" target="_blank">阿里巴巴中国站</a>
+                    <a href="http://www.aliexpress.com" target="_blank">全球速卖通</a>
+                    <a href="http://www.taobao.com" target="_blank">淘宝网</a>
+                    <a href="http://www.tmall.com" target="_blank">天猫</a>
+                    <a href="http://ju.taobao.com" target="_blank">聚划算</a>
+                    <a href="http://www.etao.com" target="_blank">一淘</a>
+                    <a href="http://www.alimama.com" target="_blank">阿里妈妈</a>
+                    <a href="http://www.fliggy.com" target="_blank">飞猪</a>
+                    <a href="http://www.aliyun.com" target="_blank">阿里云计算</a>
+                    <a href="http://www.alios.cn/" target="_blank">AliOS</a>
+                    <a href="http://aliqin.tmall.com" target="_blank">阿里通信</a>
+                    <a href="http://www.laiwang.com/" target="_blank">来往</a>
+                    <a href="http://www.alipay.com" target="_blank">支付宝</a>
+                    <a href="http://www.net.cn" target="_blank">万网</a>
+                    <a href="http://www.autonavi.com/" target="_blank">高德</a>
+                    <a href="http://www.uc.cn/" target="_blank">优视</a>
+                    <a href="http://www.umeng.com/" target="_blank">友盟</a>
+                    <a href="http://kanbox.com/" target="_blank">酷盘</a>
+                    <a href="//www.xiami.com" target="_blank">虾米</a>
+                    <a href="http://www.alibabaplanet.com/" target="_blank">阿里星球</a>
+                    <a href="http://www.dingtalk.com/?lwfrom=20150205111444391" target="_blank">钉钉</a>
+                    <a href="http://www.aligames.com/" target="_blank">阿里游戏</a>
+                </div>
+                <div class="extra">
+                    <div class="sns">
+                        关注虾米：
+                        <a href="http://t.sina.com.cn/xiamixiamixiami" title="新浪微博"><b class="icon sina"></b></a>
+                        <a href="http://page.renren.com/699099957/index" title="人人网"><b class="icon renren"></b></a>
+                        <a href="http://new.qzone.qq.com/810167634" title="QQ 空间"><b class="icon qzone"></b></a>
+                        <a href="http://t.qq.com/xiaxiaomi" title="腾讯微博"><b class="icon tqq"></b></a>
+                        <a href="http://www.douban.com/people/xiaxiaomi" title="豆瓣"><b class="icon douban"></b></a>
+                    </div>
+                    <div class="copyright">© 2007 -
+                        <script>document.write(new Date().getFullYear());</script> <a
+                            href="//www.xiami.com/">阿里巴巴(杭州)文化创意有限公司</a> - <a href="//www.xiami.com/sitemap"
+                            title="网站地图">网站地图</a> <strong class="xiami_motto ti" title="give music a chance">"give music
+                            a chance"</strong><br /><a
+                            href="//img.alicdn.com/tps/TB15ZpGKpXXXXabXpXXXXXXXXXX-843-597.jpg"
+                            target="_blank">浙网文[2015]0294-064号</a> <a href="http://www.miibeian.gov.cn/" target="_blank"
+                            title="浙ICP备08103200号-2">浙ICP备08103200号-2</a> 阿里巴巴旗下网站</div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
