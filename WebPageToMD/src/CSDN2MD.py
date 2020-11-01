@@ -78,6 +78,7 @@ class HTML2MD():
     def donwPics(self, downloadpic=False):
         bsobj = BeautifulSoup(self.html.content, features="lxml")
         # article title
+        # <h1 class="title-article" id="articleContentId">两轮差速移动机器人运动分析、建模和控制</h1>
         # <h1 class="title-article" id="articleContentId">谷歌浏览器(Chrome)查看http报文headers信息</h1>
         h1 = bsobj.find(
             "h1", attrs={"class": "title-article", "id": "articleContentId"})
@@ -232,6 +233,13 @@ class HTML2MD_LOCAL():
                 page_abs_path = os.path.join(page_abs_path, i)
         self.page_path = page_abs_path
         return page_abs_path
+
+
+def ParseWeb_CSDN(url):
+    page_md = HTML2MD(baseurl=url)
+    html = page_md.fetchUrl()
+    page_md.donwPics()
+    page_md.downArticle()
 
 
 if __name__ == "__main__":

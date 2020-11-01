@@ -1,5 +1,7 @@
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 from CSDN2MD import HTML2MD_LOCAL
+from CSDN2MD import ParseWeb_CSDN
+
 
 def ParseAlg():
     url = r"file:///D:/Python_M/Code/WebPageToMD/pages/Dijsktra's%20algorithm.html"
@@ -9,4 +11,5 @@ def ParseAlg():
 
 
 if __name__ == "__main__":
-    ParseAlg()
+    url = r"https://blog.csdn.net/iProphet/article/details/83661753"
+    ParseWeb_CSDN(url)
