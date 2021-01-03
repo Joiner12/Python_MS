@@ -62,3 +62,7 @@ Jay/Script/Draft-Jay.py
 # WebPageToMD/pages/*
 spleeter_R.py
 MatchStickMan/draft.py
+
+#ppt
+*.ppt
+*.pptx
