@@ -20,22 +20,26 @@ class Itool(QWidget):
         self.setupUi()
 
     def setupUi(self):
-        title = QLabel('Title')
-        author = QLabel('Author')
-        review = QLabel('Review')
-
-        wifi = QPushButton("WIFI密码查看")
-        lantern = QPushButton("启动LANATERN")
-        wallpaper = QPushButton("壁纸命名")
-
+        mainLayout = QHBoxLayout()
         grid = QGridLayout()
-        grid.setSpacing(10)
+        grid.setSpacing(1)
+        buttonName = ["WIFI密码查看", "启动LANTERN", "壁纸命名", "壁纸下载", "1", "2"]
+        # main layout button name
+        positions = [(i, j) for i in range(8) for j in range(1)]
+        for name, position in zip(buttonName, positions):
+            if name == "":
+                continue
+            CurButton = QPushButton(name)
+            grid.addWidget(CurButton, *position)
 
-        grid.addWidget(wifi, 0, 0, 1, 1)  # WiFi密码查看
-        grid.addWidget(lantern, 0, 1, 1, 1)  # 蓝灯
-        grid.addWidget(wallpaper, 0, 2, 1, 1)  # 壁纸规范命名
+        stateBox = QLabel("NOTHING")
+        mainLayout.addLayout(grid)
+        mainLayout.addWidget(stateBox)
+        mainLayout.setStretch(0, 2)
+        mainLayout.setStretch(1, 8)
+        mainLayout.setSpacing(10)
+        self.setLayout(mainLayout)
 
-        self.setLayout(grid)
         # 环境配置
         self.setWindowTitle('ITool')
         self.setWindowIcon(
@@ -45,8 +49,7 @@ class Itool(QWidget):
 
     def paintEvent(self, event):
         bgQp = QPainter(self)
-        # mainBackGround = os.path.join(self.srcpath, 'Background-5.jpg')
-        mainBackGround = r"D:\Codes\Python_MS\ToolInOne\Doc\Pics\WallPaper_260.jpg"
+        mainBackGround = r"D:\Codes\Python_MS\ToolInOne\Doc\Pics\background-1.png"
         bg = QPixmap(mainBackGround)
         bgQp.drawPixmap(self.rect(), bg)
 

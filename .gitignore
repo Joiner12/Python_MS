@@ -66,3 +66,7 @@ MatchStickMan/draft.py
 #ppt
 *.ppt
 *.pptx
+
+# special files
+PyQt5快速开发与实战.pdf
+debug.log

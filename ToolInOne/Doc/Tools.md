@@ -19,3 +19,4 @@
 
 ## Reference
 
+[zetcode-pyqt5](http://zetcode.com/gui/pyqt
