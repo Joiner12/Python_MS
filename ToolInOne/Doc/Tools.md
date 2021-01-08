@@ -15,6 +15,18 @@
 
 
 
+## lyrics board
+
+效果图：
+
+![lyricboard](D:\Softwares\TyporaPic\lyricboard.png)
+
+
+
+思路：
+
+根据lyrics文件时间戳，生成对应背景图片。
+
 
 
 ## Reference
