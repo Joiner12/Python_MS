@@ -8,7 +8,7 @@ from PyQt5.QtCore import Qt, pyqtSignal, QPoint, QSize
 from PyQt5.QtGui import QFont, QEnterEvent, QPainter, QColor, QPen, QIcon, QPixmap
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QSpacerItem, QSizePolicy, QPushButton
 from PyQt5.QtWidgets import QTextEdit, QGridLayout, QApplication
-
+from Wifi import Wifi
 # 样式
 StyleSheet = """
  /*标题栏*/
@@ -372,20 +372,17 @@ class MainWindow(QWidget):
 
     # setup ui
     def setupUI(self):
-        print("setup ui")
-        # layout = QVBoxLayout(self, spacing=0)
-        # layout.setContentsMargins(0, 0, 0, 0)
-        mainLayout = QHBoxLayout()
-        grid = QGridLayout()
-        grid.setSpacing(1)
         buttonName = ["WIFI密码查看", "启动LANTERN", "壁纸命名", "壁纸下载", "1", "2"]
+        mainLayout = QHBoxLayout(spacing=0)
+        mainLayout.setContentsMargins(0, 0, 0, 0)
+
+        #sublayout -grid
+        grid = QGridLayout()
+        grid.setSpacing(0)
+        # wifi code checker
+        wifibutton = Wifi()
+        grid.addWidget(wifibutton, 0, 0, 1, 1)
         # main layout button name
-        positions = [(i, j) for i in range(8) for j in range(1)]
-        for name, position in zip(buttonName, positions):
-            if name == "":
-                continue
-            CurButton = QPushButton(name)
-            grid.addWidget(CurButton, *position)
 
         stateBox = QLabel("NOTHING")
         mainLayout.addLayout(grid)
