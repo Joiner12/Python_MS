@@ -25,14 +25,14 @@ class Wifi(QWidget):
     # ui setting
     def setupUi(self):
         # set button style
-        button = QPushButton("WIFI密码查看", clicked=self.checksignal.emit)
+        self.button = QPushButton("WIFI密码查看", clicked=self.checksignal.emit)
         self.checksignal.connect(self.ClickFcn)
         # button = QPushButton(
         #     "WIFI密码查看", clicked=self.checksignal.emit, font=font)
-        button.setStyleSheet(buttonStyle_1)
-        button.clicked.connect(self.ClickFcn)
+        self.button.setStyleSheet(buttonStyle_1)
+        # button.clicked.connect(self.ClickFcn)
         mainlayout = QVBoxLayout()
-        mainlayout.addWidget(button)
+        mainlayout.addWidget(self.button)
         self.setLayout(mainlayout)
 
     """
@@ -46,18 +46,20 @@ class Wifi(QWidget):
 
     def ShowWifi(self):
         a = datetime.now().strftime("%A, %d. %B %Y %I:%M %p")
+        self.netshprofiles = {}
         f1 = os.popen("netsh wlan show profiles")
         if not f1 is None:
             f = f1.read()
-            ftemp = list()
-            # configall = re.findall("所有用户配置文件 : [\w]*", f, re.M)
-            configall = re.findall("(?<=所有用户配置文件 : )(.*)", f, re.M)
-            for j in configall:
-                j_key = self.FindKey(j)
-                self.netshprofiles[j] = j_key
+            f1.close()
         else:
-            self.netshprofiles = {}
-        f1.close()
+            f1.close()
+            return
+        ftemp = list()
+        # configall = re.findall("所有用户配置文件 : [\w]*", f, re.M)
+        configall = re.findall("(?<=所有用户配置文件 : )(.*)", f, re.M)
+        for j in configall:
+            j_key = self.FindKey(j)
+            self.netshprofiles[j] = j_key
 
     def FindKey(self, name=""):
         if len(name) > 0:
@@ -75,8 +77,19 @@ class Wifi(QWidget):
             keyword_prt = ""
         return keyword_prt
 
-    def GetProfileWifi(self):
-        return self.netshprofiles
+    def GetProfileWifi(self, choice=0):
+        if choice == 1:  # return tuple
+            return 10
+        elif choice == 2:  # return string
+            sret = ""
+            for i in self.netshprofiles:
+                sret += str(i) + ":" + str(self.netshprofiles[i])+"<hr>"
+            if len(sret) == 0:
+                return "empty profiles"
+            else:
+                return sret
+        else:  # return dict
+            return self.netshprofiles
 
 
 if __name__ == "__main__":

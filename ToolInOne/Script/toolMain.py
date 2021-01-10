@@ -9,6 +9,8 @@ from PyQt5.QtGui import QFont, QEnterEvent, QPainter, QColor, QPen, QIcon, QPixm
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QSpacerItem, QSizePolicy, QPushButton
 from PyQt5.QtWidgets import QTextEdit, QGridLayout, QApplication
 from Wifi import Wifi
+from textArea import textArea
+from launcher import Launcher
 # 样式
 StyleSheet = """
  /*标题栏*/
@@ -372,7 +374,8 @@ class MainWindow(QWidget):
 
     # setup ui
     def setupUI(self):
-        buttonName = ["WIFI密码查看", "启动LANTERN", "壁纸命名", "壁纸下载", "1", "2"]
+        self.buttonName = ["WIFI密码查看", "VPN",
+                           "壁纸命名", "Musictool", "1", "2"]
         mainLayout = QHBoxLayout(spacing=0)
         mainLayout.setContentsMargins(0, 0, 0, 0)
 
@@ -380,18 +383,36 @@ class MainWindow(QWidget):
         grid = QGridLayout()
         grid.setSpacing(0)
         # wifi code checker
-        wifibutton = Wifi()
-        grid.addWidget(wifibutton, 0, 0, 1, 1)
-        # main layout button name
+        self.wifibutton = Wifi()
+        # VPN
+        self.vpn = Launcher(
+            filepath=r"", iconfile=r"D:\Codes\Python_MS\ToolInOne\Doc\Pics\vpn.png", buttonname="VPN")
+        # MUSIC TOOL
+        self.musictool = Launcher(
+            filepath="", iconfile="D:\Codes\Python_MS\ToolInOne\Doc\Pics\musictool.png", buttonname="Musictool")
+        # reserve
+        self.reservebutton = Launcher(buttonname="...")
 
-        stateBox = QLabel("NOTHING")
+        # infomation area
+        self.stateBox = textArea()
+        # add button
+        grid.addWidget(self.wifibutton, 0, 0, 1, 1)
+        grid.addWidget(self.vpn, 1, 0, 1, 1)
+        grid.addWidget(self.musictool, 2, 0, 1, 1)
+        grid.addWidget(self.reservebutton, 3, 0, 1, 1)
+        #
         mainLayout.addLayout(grid)
-        mainLayout.addWidget(stateBox)
+        mainLayout.addWidget(self.stateBox)
         mainLayout.setStretch(0, 2)
         mainLayout.setStretch(1, 8)
         mainLayout.setSpacing(10)
         self.setLayout(mainLayout)
 
+        # 绑定sender
+        self.wifibutton.button.clicked.connect(self.buttonClikced)
+        self.vpn.button.clicked.connect(self.buttonClikced)
+        self.musictool.button.clicked.connect(self.buttonClikced)
+        self.reservebutton.button.clicked.connect(self.buttonClikced)
     # draw background
 
     def paintEvent(self, event):
@@ -400,9 +421,32 @@ class MainWindow(QWidget):
         bg = QPixmap(mainBackGround)
         bgQp.drawPixmap(self.rect(), bg)
 
+    def buttonClikced(self):
+        sender = self.sender()
+        text = sender.text()
+        print(text)
+        if text in self.buttonName:
+            # wifi 密码
+            if text == self.buttonName[0]:
+                wifiprofiles = self.wifibutton.GetProfileWifi(choice=2)
+                # self.stateBox.ModifyText(wifiprofiles)
+                self.stateBox.ModifyText(
+                    flag='p', infoIn=wifiprofiles)
+            # vpn
+            if text == self.buttonName[1]:
+                self.stateBox.ModifyText(
+                    flag='p', infoIn=self.buttonName[1])
+
+            if text == self.buttonName[2]:
+                self.stateBox.ModifyText(
+                    flag='p', infoIn=self.buttonName[2])
+
+            if text == self.buttonName[3]:
+                self.stateBox.ModifyText(
+                    flag='p', infoIn=self.buttonName[3])
+
 
 if __name__ == '__main__':
-
     app = QApplication(sys.argv)
     app.setStyleSheet(StyleSheet)
     mainWnd = FramelessWindow()
