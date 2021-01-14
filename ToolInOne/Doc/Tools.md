@@ -29,6 +29,14 @@
 
 
 
+## issue
+
+1. 按键点击绑定事件无法在模块外部响应；
+
+2. 脚本无法正常启动外部程序（使用popen启用进程，脚本运行结束之后进程同时关闭）；
+
+
+
 ## Reference
 
 [zetcode-pyqt5](http://zetcode.com/gui/pyqt
