@@ -385,11 +385,20 @@ class MainWindow(QWidget):
         # wifi code checker
         self.wifibutton = Wifi()
         # VPN
+        # D:\Softwares\ChromeGo\2.蓝灯翻墙1.cmd
+        # D:\MusicTool\MusicTools v1.9.1.0.exe
+        filepath_1 = r"D:\Softwares\ChromeGo\蓝灯翻墙1.cmd"
         self.vpn = Launcher(
-            filepath=r"", iconfile=r"D:\Codes\Python_MS\ToolInOne\Doc\Pics\vpn.png", buttonname="VPN")
+            filepath=filepath_1,
+            iconfile=r"D:\Codes\Python_MS\ToolInOne\Doc\Pics\vpn.png",
+            buttonname="VPN",
+            processname="lartern.exe")
         # MUSIC TOOL
         self.musictool = Launcher(
-            filepath="", iconfile="D:\Codes\Python_MS\ToolInOne\Doc\Pics\musictool.png", buttonname="Musictool")
+            filepath=r"D:\MusicTool\MusicTools v1.9.1.0.exe",
+            iconfile="D:\Codes\Python_MS\ToolInOne\Doc\Pics\musictool.png",
+            buttonname="Musictool",
+            processname="MusicTools.exe")
         # reserve
         self.reservebutton = Launcher(buttonname="...")
 
@@ -428,8 +437,9 @@ class MainWindow(QWidget):
         if text in self.buttonName:
             # wifi 密码
             if text == self.buttonName[0]:
-                wifiprofiles = self.wifibutton.GetProfileWifi(choice=2)
-                # self.stateBox.ModifyText(wifiprofiles)
+                # repack info
+                wifiprofiles = "<h1>名称:密码<hr></h1>"
+                wifiprofiles += self.wifibutton.GetProfileWifi(choice=2)
                 self.stateBox.ModifyText(
                     flag='p', infoIn=wifiprofiles)
             # vpn

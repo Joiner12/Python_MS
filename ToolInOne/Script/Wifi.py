@@ -20,7 +20,6 @@ class Wifi(QWidget):
     def __init__(self):
         super().__init__()
         self.setupUi()
-        print("netsh wlan show profile")
 
     # ui setting
     def setupUi(self):
