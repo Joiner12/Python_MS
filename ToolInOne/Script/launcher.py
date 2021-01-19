@@ -10,6 +10,8 @@ from PyQt5.QtWidgets import *
 from os import path
 from buttonstyle import *
 import subprocess
+import win32api
+
 """
 D:\Codes\Python_MS\ToolInOne\Doc\Pics\vpn.png
 D:\Codes\Python_MS\ToolInOne\Doc\Pics\musictool.png
@@ -32,7 +34,7 @@ class Launcher(QWidget):
     def __setpUI(self):
         mainlayout = QVBoxLayout()
         self.button = QPushButton(self, clicked=self.clickedSignal.emit)
-        self.button.setStyleSheet(buttonStyle_1)
+        self.button.setStyleSheet(buttonStyle_4)
         self.clickedSignal.connect(self.__clickedFcn)
         # self.button.clicked.connect(self.__clickedFcn)
         # icon
@@ -65,9 +67,12 @@ class Launcher(QWidget):
             return
         # according to suffix to determine
         if splitsuffix == ".exe":
-            ex = subprocess.Popen(['start', filename], shell=True)
+            # ex = subprocess.Popen(['start', filename], shell=True)
+            win32api.ShellExecute(0, 'open', filename, '', '', 1)
         if splitsuffix == ".cmd":
-            cm = subprocess.Popen(['start', filename], shell=True)
+            if False:
+                cm = subprocess.Popen(['start', filename], shell=True)
+            win32api.ShellExecute(0, 'open', filename, '', '', 1)
             self.processInfo = self.launchInfo['processname'] + \
                 " started succeed..."
 

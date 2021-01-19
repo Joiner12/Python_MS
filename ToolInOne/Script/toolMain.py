@@ -15,7 +15,7 @@ from launcher import Launcher
 StyleSheet = """
  /*标题栏*/
  TitleBar {
-     background-color: #22B8DD;
+    background-color: #22B8DD;
  }
  /*最小化最大化关闭按钮通用默认背景*/
  # buttonMinimum,#buttonMaximum,#buttonClose {
@@ -390,13 +390,11 @@ class MainWindow(QWidget):
         filepath_1 = r"D:\Softwares\ChromeGo\蓝灯翻墙1.cmd"
         self.vpn = Launcher(
             filepath=filepath_1,
-            iconfile=r"D:\Codes\Python_MS\ToolInOne\Doc\Pics\vpn.png",
             buttonname="VPN",
             processname="lartern.exe")
         # MUSIC TOOL
         self.musictool = Launcher(
             filepath=r"D:\MusicTool\MusicTools v1.9.1.0.exe",
-            iconfile="D:\Codes\Python_MS\ToolInOne\Doc\Pics\musictool.png",
             buttonname="Musictool",
             processname="MusicTools.exe")
         # reserve

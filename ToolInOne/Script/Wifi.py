@@ -28,7 +28,7 @@ class Wifi(QWidget):
         self.checksignal.connect(self.ClickFcn)
         # button = QPushButton(
         #     "WIFI密码查看", clicked=self.checksignal.emit, font=font)
-        self.button.setStyleSheet(buttonStyle_1)
+        self.button.setStyleSheet(buttonStyle_4)
         # button.clicked.connect(self.ClickFcn)
         mainlayout = QVBoxLayout()
         mainlayout.addWidget(self.button)
@@ -40,6 +40,8 @@ class Wifi(QWidget):
     """
 
     def ClickFcn(self):
+        # print("button pushed")
+        # return
         self.ShowWifi()
     # 查看WiFi账号密码
 

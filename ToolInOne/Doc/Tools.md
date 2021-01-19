@@ -29,11 +29,18 @@
 
 
 
+## you-get downloader
+
+输入视频链接→选择视频格式→下载视频到指定文件夹
+
+
+
 ## issue
 
 1. 按键点击绑定事件无法在模块外部响应；
-
 2. 脚本无法正常启动外部程序（使用popen启用进程，脚本运行结束之后进程同时关闭）；
+3. setstylesheet完全用法[Qt Style Sheets Examples — Qt for Python](https://doc.qt.io/qtforpython/overviews/stylesheet-examples.html)
+4. ...
 
 
 
