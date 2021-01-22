@@ -53,11 +53,12 @@ class MainWindow(QWidget):
         grid.addWidget(self.vpn, 1, 0, 1, 1)
         grid.addWidget(self.musictool, 2, 0, 1, 1)
         grid.addWidget(self.reservebutton, 3, 0, 1, 1)
+
         #
         mainLayout.addLayout(grid)
         mainLayout.addWidget(self.stateBox)
         mainLayout.setStretch(0, 1)
-        mainLayout.setStretch(1, 9)
+        mainLayout.setStretch(1, 90)
         mainLayout.setSpacing(10)
 
         self.setLayout(mainLayout)

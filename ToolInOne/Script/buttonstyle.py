@@ -39,3 +39,18 @@ selectAreaStyle = (
     "QListWidget{border:4px;border-radius:4px;}"
     "QListWidget{background-color:transparent;}"
 )
+
+"""
+"""
+# button style
+buttonStyle_5 = ("QPushButton{border: none; color: white; }"
+                 '''QPushButton{border: none;border-bottom: 1px solid white;font-size: 18px;font-weight: 700;
+                 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif}'''
+                 "QPushButton: hover{border-left: 4px solid red; font-weight: 700;}")
+
+button_close = (
+    "QPushButton{background:#F76677;border-radius:5px;}QPushButton:hover{background:red;}")
+button_mini = (
+    "QPushButton{background:#6DDF6D;border-radius:5px;}QPushButton:hover{background:green;}")
+button_max = (
+    "QPushButton{background:#F7D674;border-radius:5px;}QPushButton:hover{background:yellow;}")

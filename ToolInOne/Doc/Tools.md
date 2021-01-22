@@ -11,7 +11,7 @@
 
 
 
-![设计](D:\Softwares\TyporaPic\设计-1609680626663.png)
+![设计](Pics/设计.png)
 
 
 
@@ -19,7 +19,7 @@
 
 效果图：
 
-![lyricboard](D:\Softwares\TyporaPic\lyricboard.png)
+![lyricboard](Pics/lyricboard.png)
 
 
 
