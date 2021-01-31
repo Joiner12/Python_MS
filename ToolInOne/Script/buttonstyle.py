@@ -48,9 +48,65 @@ buttonStyle_5 = ("QPushButton{border: none; color: white; }"
                  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif}'''
                  "QPushButton: hover{border-left: 4px solid red; font-weight: 700;}")
 
-button_close = (
+button_close_style = (
     "QPushButton{background:#F76677;border-radius:5px;}QPushButton:hover{background:red;}")
-button_mini = (
+button_mini_style = (
     "QPushButton{background:#6DDF6D;border-radius:5px;}QPushButton:hover{background:green;}")
-button_max = (
+button_max_style = (
     "QPushButton{background:#F7D674;border-radius:5px;}QPushButton:hover{background:yellow;}")
+
+right_widget_style = ('''
+            QWidget#right_widget{
+                color:#232C51;
+                background:white;
+                border-top:1px solid darkGray;
+                border-bottom:1px solid darkGray;
+                border-right:1px solid darkGray;
+                border-top-right-radius:10px;
+                border-bottom-right-radius:10px;
+            }
+            QLabel#right_lable{
+                border:none;
+                font-size:16px;
+                font-weight:700;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+        ''')
+
+right_recommend_widget_style = '''
+                QToolButton{border:none;}
+                QToolButton:hover{border-bottom:2px solid #F76677;}
+            '''
+right_playconsole_widget_style = '''
+            QPushButton{
+                border:none;
+            }
+        '''
+
+left_widget_style = ('''
+            QPushButton{border:none;color:white;}
+            QPushButton#left_label{
+                border:none;
+                border-bottom:1px solid white;
+                font-size:18px;
+                font-weight:700;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+            QPushButton#left_button:hover{border-left:4px solid red;font-weight:700;}
+            QWidget#left_widget{
+            background:gray;
+            border-top:1px solid white;
+            border-bottom:1px solid white;
+            border-left:1px solid white;
+            border-top-left-radius:10px;
+            border-bottom-left-radius:10px;
+        }
+        ''')
+
+right_bar_widget_search_input_style = (
+    '''QLineEdit{
+                border:1px solid gray;
+                width:300px;
+                border-radius:10px;
+                padding:2px 4px;
+        }''')
