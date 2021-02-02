@@ -8,7 +8,8 @@ from buttonstyle import*
 class MainUi(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.init_ui()
+        # self.init_ui()
+        self._initUI_v()
 
     def init_ui(self):
         self.setFixedSize(1024, 600)
@@ -205,7 +206,10 @@ class MainUi(QtWidgets.QMainWindow):
         self.setAutoFillBackground(False)  # 设置默认背景颜色,否则由于受到父窗口的影响导致透明
         self.main_layout.setSpacing(0)
 
-    # 无边框的拖动
+    def _initUI_v(self):
+        self.mainContents = QtWidgets.QTabWidget()
+        # 无边框的拖动
+
     def mouseMoveEvent(self, e: QtGui.QMouseEvent):  # 重写移动事件
         self._endPos = e.pos() - self._startPos
         self.move(self.pos() + self._endPos)
