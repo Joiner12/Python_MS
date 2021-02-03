@@ -3,13 +3,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 import qtawesome
 from buttonstyle import*
+from commonTools import *
 
 
 class MainUi(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        # self.init_ui()
-        self._initUI_v()
+        self.init_ui()
 
     def init_ui(self):
         self.setFixedSize(1024, 600)
@@ -58,32 +58,49 @@ class MainUi(QtWidgets.QMainWindow):
 
         self.left_button_1 = QtWidgets.QPushButton(
             qtawesome.icon('fa.signal', color='white'), "VPN")
-        self.left_button_1.setObjectName('left_button')
+        self.left_button_1.setObjectName('left_button_1')
         self.left_button_2 = QtWidgets.QPushButton(
             qtawesome.icon('fa.wifi', color='white'), "WIFI Checker")
-        self.left_button_2.setObjectName('left_button')
+        self.left_button_2.setObjectName('left_button_2')
         self.left_button_3 = QtWidgets.QPushButton(
             qtawesome.icon('fa.download', color='white'), "MusicTool")
-        self.left_button_3.setObjectName('left_button')
+        self.left_button_3.setObjectName('left_button_3')
         self.left_button_4 = QtWidgets.QPushButton(
             qtawesome.icon('fa.home', color='white'), "...")
-        self.left_button_4.setObjectName('left_button')
+        self.left_button_4.setObjectName('left_button_4')
         self.left_button_5 = QtWidgets.QPushButton(
             qtawesome.icon('fa.download', color='white'), "...")
-        self.left_button_5.setObjectName('left_button')
+        self.left_button_5.setObjectName('left_button_5')
         self.left_button_6 = QtWidgets.QPushButton(
             qtawesome.icon('fa.heart', color='white'), "...")
-        self.left_button_6.setObjectName('left_button')
+        self.left_button_6.setObjectName('left_button_6')
         self.left_button_7 = QtWidgets.QPushButton(
             qtawesome.icon('fa.comment', color='white'), "...")
-        self.left_button_7.setObjectName('left_button')
+        self.left_button_7.setObjectName('left_button_7')
         self.left_button_8 = QtWidgets.QPushButton(
             qtawesome.icon('fa.star', color='white'), "...")
-        self.left_button_8.setObjectName('left_button')
+        self.left_button_8.setObjectName('left_button_8')
         self.left_button_9 = QtWidgets.QPushButton(
             qtawesome.icon('fa.question', color='white'), "遇到问题")
-        self.left_button_9.setObjectName('left_button')
+        self.left_button_9.setObjectName('left_button_9')
         self.left_xxx = QtWidgets.QPushButton(" ")
+
+        self.left_buttons = [self.left_button_1,
+                             self.left_button_2, self.left_button_3,
+                             self.left_button_4, self.left_button_5,
+                             self.left_button_6, self.left_button_7,
+                             self.left_button_8, self.left_button_9]
+
+        # navagation bar sender
+        self.left_button_1.clicked.connect(self._navagationClickHandle)
+        self.left_button_2.clicked.connect(self._navagationClickHandle)
+        self.left_button_3.clicked.connect(self._navagationClickHandle)
+        self.left_button_4.clicked.connect(self._navagationClickHandle)
+        self.left_button_5.clicked.connect(self._navagationClickHandle)
+        self.left_button_6.clicked.connect(self._navagationClickHandle)
+        self.left_button_7.clicked.connect(self._navagationClickHandle)
+        self.left_button_8.clicked.connect(self._navagationClickHandle)
+        self.left_button_9.clicked.connect(self._navagationClickHandle)
 
         self.left_layout.addWidget(self.left_mini, 0, 0, 1, 1)
         self.left_layout.addWidget(self.left_close, 0, 2, 1, 1)
@@ -114,60 +131,14 @@ class MainUi(QtWidgets.QMainWindow):
         self.right_bar_layout.addWidget(self.search_icon, 0, 0, 1, 1)
         self.right_bar_layout.addWidget(
             self.right_bar_widget_search_input, 0, 1, 1, 8)
-
         self.right_layout.addWidget(self.right_bar_widget, 0, 0, 1, 9)
 
-        self.right_recommend_widget = QtWidgets.QWidget()  # 推荐封面部件
+        self.right_recommend_widget = commonTools()  # 推荐封面部件
         self.right_recommend_layout = QtWidgets.QGridLayout()  # 推荐封面网格布局
         self.right_recommend_widget.setLayout(self.right_recommend_layout)
 
-        self.recommend_button_1 = QtWidgets.QToolButton()
-        self.recommend_button_1.setText("apple-alt")  # 设置按钮文本
-        self.recommend_button_1.setIcon(
-            qtawesome.icon('fa.star', color='red'))  # 设置按钮图标
-        self.recommend_button_1.setIconSize(QtCore.QSize(90, 90))  # 设置图标大小
-        self.recommend_button_1.setToolButtonStyle(
-            QtCore.Qt.ToolButtonTextUnderIcon)  # 设置按钮形式为上图下文
-
-        self.recommend_button_2 = QtWidgets.QToolButton()
-        self.recommend_button_2.setText("apple-alt")
-        self.recommend_button_2.setIcon(
-            qtawesome.icon('fa.share', color='red'))
-        self.recommend_button_2.setIconSize(QtCore.QSize(90, 90))
-        self.recommend_button_2.setToolButtonStyle(
-            QtCore.Qt.ToolButtonTextUnderIcon)
-
-        self.recommend_button_3 = QtWidgets.QToolButton()
-        self.recommend_button_3.setText("apple-alt")
-        self.recommend_button_3.setIcon(
-            qtawesome.icon('fa.shopping-basket', color='red'))
-        self.recommend_button_3.setIconSize(QtCore.QSize(90, 90))
-        self.recommend_button_3.setToolButtonStyle(
-            QtCore.Qt.ToolButtonTextUnderIcon)
-
-        self.recommend_button_4 = QtWidgets.QToolButton()
-        self.recommend_button_4.setText("apple-alt")
-        self.recommend_button_4.setIcon(
-            qtawesome.icon('fa.space-shuttle', color='red'))
-        self.recommend_button_4.setIconSize(QtCore.QSize(90, 90))
-        self.recommend_button_4.setToolButtonStyle(
-            QtCore.Qt.ToolButtonTextUnderIcon)
-
-        self.recommend_button_5 = QtWidgets.QToolButton()
-        self.recommend_button_5.setText("apple-alt")
-        self.recommend_button_5.setIcon(
-            qtawesome.icon('fa.angle-double-up', color='red'))
-        self.recommend_button_5.setIconSize(QtCore.QSize(90, 90))
-        self.recommend_button_5.setToolButtonStyle(
-            QtCore.Qt.ToolButtonTextUnderIcon)
-
-        self.right_recommend_layout.addWidget(self.recommend_button_1, 0, 0)
-        self.right_recommend_layout.addWidget(self.recommend_button_2, 0, 1)
-        self.right_recommend_layout.addWidget(self.recommend_button_3, 0, 2)
-        self.right_recommend_layout.addWidget(self.recommend_button_4, 0, 3)
-        self.right_recommend_layout.addWidget(self.recommend_button_5, 0, 4)
-
-        self.right_layout.addWidget(self.right_recommend_widget, 1, 0, 2, 9)
+        # right components
+        self.right_layout.addWidget(self.right_recommend_widget, 1, 0, 8, 9)
 
         self.right_playconsole_widget = QtWidgets.QWidget()  # 播放控制部件
         self.right_playconsole_layout = QtWidgets.QGridLayout()  # 播放控制部件网格布局层
@@ -180,7 +151,7 @@ class MainUi(QtWidgets.QMainWindow):
             QtCore.Qt.AlignCenter)  # 设置布局内部件居中显示
 
         self.right_layout.addWidget(self.right_playconsole_widget, 10, 0, 1, 9)
-
+        self.right_widgets = [self.right_recommend_widget]
         self.left_close.setFixedSize(16, 16)  # 设置关闭按钮的大小
         self.left_visit.setFixedSize(16, 16)  # 设置按钮大小
         self.left_mini.setFixedSize(16, 16)  # 设置最小化按钮大小
@@ -190,6 +161,15 @@ class MainUi(QtWidgets.QMainWindow):
         self.left_mini.setStyleSheet(button_mini_style)
 
         self.left_widget.setStyleSheet(left_widget_style)
+        self.left_button_1.setStyleSheet(left_button_style)
+        self.left_button_2.setStyleSheet(left_button_style)
+        self.left_button_3.setStyleSheet(left_button_style)
+        self.left_button_4.setStyleSheet(left_button_style)
+        self.left_button_5.setStyleSheet(left_button_style)
+        self.left_button_6.setStyleSheet(left_button_style)
+        self.left_button_7.setStyleSheet(left_button_style)
+        self.left_button_8.setStyleSheet(left_button_style)
+        self.left_button_9.setStyleSheet(left_button_style)
 
         self.right_bar_widget_search_input.setStyleSheet(
             right_bar_widget_search_input_style)
@@ -206,8 +186,6 @@ class MainUi(QtWidgets.QMainWindow):
         self.setAutoFillBackground(False)  # 设置默认背景颜色,否则由于受到父窗口的影响导致透明
         self.main_layout.setSpacing(0)
 
-    def _initUI_v(self):
-        self.mainContents = QtWidgets.QTabWidget()
         # 无边框的拖动
 
     def mouseMoveEvent(self, e: QtGui.QMouseEvent):  # 重写移动事件
@@ -228,6 +206,26 @@ class MainUi(QtWidgets.QMainWindow):
     # 关闭按钮动作函数
     def close_window(self):
         self.close()
+
+    # 导航页面按钮时间分发
+    def _navagationClickHandle(self):
+        # sender
+        buttonSender = self.sender()
+        left_button_names = ['left_button_1', 'left_button_2',
+                             'left_button_3',  'left_button_4',
+                             'left_button_5', 'left_button_6',
+                             'left_button_7',  'left_button_8',
+                             'left_button_8']
+
+        # self.left_button_1.isVisible
+        left_button_index = left_button_names.index(buttonSender.objectName())
+        try:
+            cur_widget_visible = self.right_widgets[left_button_index].isVisible(
+            )
+            self.right_widgets[left_button_index].setVisible(
+                not cur_widget_visible)
+        except:
+            print('change visible')
 
 
 def main():

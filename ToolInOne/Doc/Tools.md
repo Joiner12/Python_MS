@@ -52,4 +52,10 @@
 
 ## Reference
 
-[zetcode-pyqt5](http://zetcode.com/gui/pyqt
+[zetcode-pyqt5](http://zetcode.com/gui/pyqt)
+
+[pyqt的多Button的点击事件的槽函数的区分发送signal的按钮](https://www.cnblogs.com/ribavnu/p/4672880.html)
+
+[Qt 之 show,hide,setVisible,setHidden,close 等小结](https://blog.csdn.net/dbzhang800/article/details/6300021)
+
+[qtawesome](https://github.com/spyder-ide/qtawesome)

@@ -110,3 +110,9 @@ right_bar_widget_search_input_style = (
                 border-radius:10px;
                 padding:2px 4px;
         }''')
+
+
+left_button_style = ('''
+            QPushButton{border:none;color:white;}
+            QPushButton:hover{border-left:4px solid red;font-weight:700;}
+        ''')
