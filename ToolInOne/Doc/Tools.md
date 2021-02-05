@@ -39,7 +39,32 @@
 
 - 通过链接地址请求状态回复码检测其有效性；
 
+## Ticker
 
+PyTicker
+
+1. pyqt 表盘时钟效果实现；（静态图片）
+
+https://www.cnblogs.com/zach0812/p/13121523.html
+
+1. 使用https://www.wiz.cn/zh-cn markdown文件分析时间
+2. colorpicker https://colorpicker.me/#6a63cb
+3. 首次使用需要进行配置
+
+小时钟架构
+
+- 功能
+
+  - 1.基本时间显示（动态圆表盘）
+  - 2.时间段变色（恢复）
+
+- 外观
+
+  - deer表盘背景
+  - 动态指针
+  - 时间段变色
+
+  
 
 ## issue
 
