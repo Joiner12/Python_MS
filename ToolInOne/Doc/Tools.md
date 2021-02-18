@@ -50,13 +50,15 @@ https://www.cnblogs.com/zach0812/p/13121523.html
 1. 使用https://www.wiz.cn/zh-cn markdown文件分析时间
 2. colorpicker https://colorpicker.me/#6a63cb
 3. 首次使用需要进行配置
+4. 导出为多文件安装包(或者是进行文件配置)
+5. 。。。
 
 小时钟架构
 
 - 功能
 
   - 1.基本时间显示（动态圆表盘）
-  - 2.时间段变色（恢复）
+    - 2.时间段变色（恢复）
 
 - 外观
 
@@ -84,3 +86,9 @@ https://www.cnblogs.com/zach0812/p/13121523.html
 [Qt 之 show,hide,setVisible,setHidden,close 等小结](https://blog.csdn.net/dbzhang800/article/details/6300021)
 
 [qtawesome](https://github.com/spyder-ide/qtawesome)
+
+[painting in pyqt5](https://zetcode.com/gui/pyqt5/painting/)
+
+[pyqt圆形图片](https://blog.pyqt5.com/circleimage.html)
+
+[python path](https://zhuanlan.zhihu.com/p/139783331)
