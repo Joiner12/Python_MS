@@ -57,7 +57,7 @@ class MainUi(QtWidgets.QMainWindow):
         self.left_label_3.setObjectName('left_label')
 
         self.left_button_1 = QtWidgets.QPushButton(
-            qtawesome.icon('fa.signal', color='white'), "VPN")
+            qtawesome.icon('fa.signal', color='white'), "工具集")
         self.left_button_1.setObjectName('left_button_1')
         self.left_button_2 = QtWidgets.QPushButton(
             qtawesome.icon('fa.wifi', color='white'), "WIFI Checker")

@@ -59,8 +59,8 @@ class commonTools(QtWidgets.QWidget):
         commonToollayout.addWidget(self.recommend_button_1, 0, 0)
         commonToollayout.addWidget(self.recommend_button_2, 0, 1)
         commonToollayout.addWidget(self.recommend_button_3, 0, 2)
-        commonToollayout.addWidget(self.recommend_button_4, 0, 3)
-        commonToollayout.addWidget(self.recommend_button_5, 0, 4)
+        commonToollayout.addWidget(self.recommend_button_4, 1, 0)
+        commonToollayout.addWidget(self.recommend_button_5, 1, 1)
 
 
 if __name__ == "__main__":
