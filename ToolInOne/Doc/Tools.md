@@ -39,41 +39,48 @@
 
 - 通过链接地址请求状态回复码检测其有效性；
 
+
+
 ## Ticker
 
 PyTicker
 
-1. pyqt 表盘时钟效果实现；（静态图片）
-
-https://www.cnblogs.com/zach0812/p/13121523.html
-
 1. 使用https://www.wiz.cn/zh-cn markdown文件分析时间
-2. colorpicker https://colorpicker.me/#6a63cb
-3. 首次使用需要进行配置
-4. 导出为多文件安装包(或者是进行文件配置)
-5. 。。。
+2. ...
 
 小时钟架构
 
 - 功能
 
-  - 1.基本时间显示（动态圆表盘）
+  - 1.基本时间显示（动态圆表盘）√
     - 2.时间段变色（恢复）
+  - 2.时间统计功能
+    - [ ] 计时开始
+    - [ ] 计时结束
+    - [ ] 时间统计
+    - [ ] 手动添加时间
+    - [ ] 时间段内容冲突处理
+    - [ ] ...
+  - 首次使用需要进行配置
+  - 导出为多文件安装包(或者是进行文件配置)
 
 - 外观
 
-  - deer表盘背景
-  - 动态指针
+  - deer表盘背景√
+  - 动态指针√
   - 时间段变色
 
-  
+
+
+
+
 
 ## issue
 
 1. 按键点击绑定事件无法在模块外部响应；
 2. 脚本无法正常启动外部程序（使用popen启用进程，脚本运行结束之后进程同时关闭）；
 3. setstylesheet完全用法[Qt Style Sheets Examples — Qt for Python](https://doc.qt.io/qtforpython/overviews/stylesheet-examples.html)
-4. ...
+4. 安装包附属文件管理
 
 
 
@@ -94,3 +101,7 @@ https://www.cnblogs.com/zach0812/p/13121523.html
 [python path](https://zhuanlan.zhihu.com/p/139783331)
 
 [qt坐标系统](http://shouce.jb51.net/qt-beginning/20.html)
+
+[pyqt 表盘时钟效果实现；（静态图片）](https://www.cnblogs.com/zach0812/p/13121523.html)
+
+[colorpicker ](https://colorpicker.me/#6a63cb)
