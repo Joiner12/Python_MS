@@ -92,3 +92,5 @@ https://www.cnblogs.com/zach0812/p/13121523.html
 [pyqt圆形图片](https://blog.pyqt5.com/circleimage.html)
 
 [python path](https://zhuanlan.zhihu.com/p/139783331)
+
+[qt坐标系统](http://shouce.jb51.net/qt-beginning/20.html)
